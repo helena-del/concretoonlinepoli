@@ -1,132 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Polimix Concreto</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polimix Concreto</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: #f4f4f4;
-      color: #333;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: white;
+}
 
-    header {
-      background: url('https://via.placeholder.com/1200x500?text=Concreto+de+Qualidade') no-repeat center;
-      background-size: cover;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
+/* NAVBAR */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #000;
+}
 
-    header h1 {
-      background: rgba(0,0,0,0.6);
-      padding: 15px;
-      border-radius: 8px;
-    }
+.nav img {
+  width: 140px;
+}
 
-    .container {
-      padding: 20px;
-      text-align: center;
-    }
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    .logo {
-      width: 120px;
-      margin-top: -60px;
-      border-radius: 50%;
-      border: 5px solid white;
-      background: white;
-    }
+/* HERO */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
 
-    h2 {
-      margin-top: 15px;
-      font-size: 24px;
-    }
+.hero-text {
+  max-width: 500px;
+}
 
-    .info {
-      margin: 15px 0;
-      font-size: 18px;
-    }
+.hero h1 {
+  font-size: 42px;
+}
 
-    .benefits {
-      text-align: left;
-      max-width: 400px;
-      margin: 20px auto;
-    }
+.hero span {
+  color: #ff6a00;
+}
 
-    .benefits li {
-      margin-bottom: 10px;
-    }
+.hero p {
+  color: #ccc;
+  margin: 15px 0;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background: #25d366;
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* BOTÃO */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ff6a00;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
 
-    .btn:hover {
-      background: #1ebe5d;
-    }
+.btn:hover {
+  background: #ff8126;
+}
 
-    footer {
-      margin-top: 40px;
-      padding: 15px;
-      background: #222;
-      color: #ccc;
-      text-align: center;
-    }
-  </style>
+/* BENEFÍCIOS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #1c1c1c;
+  padding: 25px;
+  width: 250px;
+  border-radius: 10px;
+  border-top: 4px solid #ff6a00;
+}
+
+/* CTA */
+.cta {
+  background: #ff6a00;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta a {
+  background: black;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>CONCRETO DE QUALIDADE?</h1>
-</header>
-
-<div class="container">
-
-  <!-- LOGO -->
-  <img class="logo" src="https://via.placeholder.com/150?text=Polimix" alt="Polimix">
-
-  <h2>POLIMIX CONCRETO</h2>
-
-  <div class="info">
-    📞 +55 93 99198-4251 <br>
-    🚧 Atendimento rápido e confiável
-  </div>
-
-  <ul class="benefits">
-    <li>✔ Concreto de alta qualidade</li>
-    <li>✔ Entrega rápida</li>
-    <li>✔ Ideal para obras e construções</li>
-    <li>✔ Atendimento direto pelo WhatsApp</li>
-  </ul>
-
-  <a class="btn"
-     href="https://wa.me/5593991984251?text=Olá,%20quero%20pedir%20concreto%20Polimix"
-     target="_blank">
-     🚀 Pedir pelo WhatsApp
-  </a>
-
+<!-- NAVBAR -->
+<div class="nav">
+  <img src="logo.png">
+  <a href="https://wa.me/5593991984251" target="_blank">Contato</a>
 </div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>CONCRETO <span>DE QUALIDADE</span> PARA SUA OBRA</h1>
+    <p>Entrega rápida, alta resistência e atendimento direto.</p>
+
+    <a class="btn"
+    href="https://wa.me/5593991984251?text=Olá,%20quero%20concreto"
+    target="_blank">
+    Solicitar Orçamento
+    </a>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="section">
+  <h2>Por que escolher a Polimix?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Alta Resistência</h3>
+      <p>Concreto confiável para qualquer tipo de obra.</p>
+    </div>
+
+    <div class="card">
+      <h3>Entrega Rápida</h3>
+      <p>Chegamos no prazo para não atrasar sua obra.</p>
+    </div>
+
+    <div class="card">
+      <h3>Atendimento Ágil</h3>
+      <p>Resposta imediata via WhatsApp.</p>
+    </div>
+
+    <div class="card">
+      <h3>Preço Competitivo</h3>
+      <p>Qualidade com ótimo custo-benefício.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Fale agora com a Polimix</h2>
+  <p>Atendimento rápido direto no WhatsApp</p>
+
+  <a href="https://wa.me/5593991984251?text=Olá,%20preciso%20de%20concreto"
+  target="_blank">
+  📲 CHAMAR NO WHATSAPP
+  </a>
+</section>
+
+<!-- BOTÃO FLUTUANTE -->
+<a class="whatsapp"
+href="https://wa.me/5593991984251"
+target="_blank">
+💬
+</a>
 
 <footer>
   © 2026 Polimix Concreto
